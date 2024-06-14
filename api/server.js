@@ -9,7 +9,7 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://population-chart-web-thanchatip-thanchatips-projects.vercel.app",
+  "https://population-chart-npofdagwq-thanchatips-projects.vercel.app",
 ];
 
 // CORS configuration
