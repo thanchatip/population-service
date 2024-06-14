@@ -12,8 +12,9 @@ app.get("/api/population", (req, res) => {
   try {
     const year = req.query.year;
     const workbook = xlsx.readFile(
-      path.resolve(__dirname, "population-and-demography.csv")
+      path.resolve(__dirname, "../data/population-and-demography.csv")
     );
+
     const sheet = workbook.Sheets[workbook.SheetNames[0]];
     const jsonData = xlsx.utils.sheet_to_json(sheet, { header: 1, raw: false });
     const dataWithoutHeader = jsonData.slice(1);
@@ -52,8 +53,9 @@ app.get("/api/population", (req, res) => {
 app.get("/api/year-filters", (req, res) => {
   try {
     const workbook = xlsx.readFile(
-      path.resolve(__dirname, "population-and-demography.csv")
+      path.resolve(__dirname, "../data/population-and-demography.csv")
     );
+
     const sheet = workbook.Sheets[workbook.SheetNames[0]];
     const jsonData = xlsx.utils.sheet_to_json(sheet, { header: 1, raw: false });
     const dataWithoutHeader = jsonData.slice(1);
