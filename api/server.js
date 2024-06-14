@@ -9,12 +9,13 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://your-production-domain.com",
+  "https://population-chart-npofdagwq-thanchatips-projects.vercel.app",
+  "https://population-chart-web.vercel.app",
 ];
 
 // CORS configuration
 const corsOptions = {
-  origin: "http://localhost:5173", // Update to the port your frontend is running on
+  origin: allowedOrigins, // Update to the port your frontend is running on
   optionsSuccessStatus: 200,
 };
 
